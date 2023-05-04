@@ -49,7 +49,7 @@ public class SecurityConfig {
     /*public static final String DEFAULT_ENCODED_SECRET_KEY = "bCzY/M48bbkwBEWjmNSIEPfwApcvXOnkCxORBEbPr+4=";
     public static final SecretKey DEFAULT_SECRET_KEY = new SecretKeySpec(Base64.getDecoder().decode(DEFAULT_ENCODED_SECRET_KEY), "AES");*/
     @Bean
-    JwtDecoder jwtDecoder() {
+    public JwtDecoder jwtDecoder() {
         return NimbusJwtDecoder.withPublicKey(rsaKeyProperties.getPublicKey()).build();
     }
 
